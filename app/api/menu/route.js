@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getMenu, saveMenu } from '@/lib/store';
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const menu = await getMenu();
