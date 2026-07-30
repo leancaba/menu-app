@@ -81,7 +81,7 @@ export default function AdminPage() {
 
       if (!res.ok) {
         setStatus({ type: 'error', text: (data && data.error) || `No se pudo guardar (código ${res.status}).` });
-      } else if (data && (data.mode === 'file' || data.mode === 'kv')) {
+   } else if (data && (data.mode === 'file' || data.mode === 'kv' || data.mode === 'redis')) {
         setStatus({ type: 'ok', text: 'Cambios guardados correctamente.' });
       } else {
         setStatus({
